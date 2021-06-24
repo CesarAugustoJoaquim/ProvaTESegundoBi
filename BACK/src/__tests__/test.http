@@ -1,0 +1,12 @@
+###
+POST http://localhost:3000/pessoa/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Cesar Augusto Joaquim",
+    "cpf": "111.111.111-23",
+    "idade": 21
+}
+
+###
+GET http://localhost:3000/pessoa/listar
