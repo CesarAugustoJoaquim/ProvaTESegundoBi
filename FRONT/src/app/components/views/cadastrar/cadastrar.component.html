@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-title> Nova Pessoa </mat-card-title>
+    <mat-card-content>
+
+    <div class="noca-pessoa">
+        <mat-card>
+            <mat-card-title> Adicionar Pessoa </mat-card-title>
+            <mat-card-content>
+              <div class="conteudo pessoa">
+                <mat-form-field>
+                  <mat-label for="nome">Nome</mat-label>
+                  <input matInput placeholder="NOME" type="text" name="nome" [(ngModel)]="nome" />
+                </mat-form-field>
+                <mat-form-field>
+                  <mat-label for="cpf">CPF</mat-label>
+                  <input matInput placeholder="CPF" type="text" name="cpf" [(ngModel)]="cpf" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label for="idade">Idade</mat-label>
+                    <input matInput placeholder="IDADE" type="number" name="idade" [(ngModel)]="idade" />
+                </mat-form-field>
+              </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+      <mat-card-actions>
+        <button mat-raised-button color="warn" (click)="cadastrar()">Cadastrar</button>
+        <a mat-stroked-button routerLink=""> Listar Pessoas </a>
+      </mat-card-actions>
+    </mat-card-content>
+  </mat-card>

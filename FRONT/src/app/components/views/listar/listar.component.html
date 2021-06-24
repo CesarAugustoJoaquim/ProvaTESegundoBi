@@ -1,0 +1,35 @@
+<a mat-raised-button color="warn" routerLink="/pessoa/cadastrar">
+    <mat-icon>person_add</mat-icon>
+    Nova Pessoa
+  </a>
+  
+  <table mat-table [dataSource]="pessoas" class="mat-elevation-z8">
+    
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> # </th>
+      <td mat-cell *matCellDef="let pessoa"> {{pessoa._id}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let pessoa"> {{ pessoa.nome }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cpf">
+      <th mat-header-cell *matHeaderCellDef> CPF </th>
+      <td mat-cell *matCellDef="let pessoa"> {{ pessoa.cpf }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="idade">
+      <th mat-header-cell *matHeaderCellDef> Idade </th>
+      <td mat-cell *matCellDef="let pessoa"> {{ pessoa.idade }} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="criadoEm">
+      <th mat-header-cell *matHeaderCellDef> Criado em </th>
+      <td mat-cell *matCellDef="let pessoa"> {{ pessoa.createdAt | date: "dd/MM/yyyy HH:mm:ss" }} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

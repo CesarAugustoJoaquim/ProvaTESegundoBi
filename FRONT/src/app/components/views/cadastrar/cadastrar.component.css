@@ -1,0 +1,26 @@
+mat-card-content {
+  padding: 16px;
+}
+
+.mes {
+  width: 50%;
+  display: block;
+}
+.card {
+  width: 100%;
+}
+
+mat-grid-tile {
+  width: 100%;
+}
+
+.nova-pessoa {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.conteudo-pessoa {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}

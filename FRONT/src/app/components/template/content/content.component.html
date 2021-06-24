@@ -1,0 +1,17 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
+      <mat-nav-list>
+        <a mat-list-item routerLink="">
+          <mat-icon class="material-icons-outlined" mat-list-icon>person</mat-icon>
+          <span> Home</span>
+        </a>
+        <a mat-list-item routerLink="/pessoa/cadastrar">
+          <mat-icon class="material-icons-outlined" mat-list-icon>person_add</mat-icon>
+          <span> Cadastrar Pessoa</span>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
